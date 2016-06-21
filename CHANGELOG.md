@@ -1,79 +1,203 @@
+<<<<<<< HEAD
 # 3.1.0
 
 Add [gamepad](https://github.com/ericlathrop/html5-gamepad) support.
 
 # 3.0.2
+=======
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-Fix keyboard events bubbling outside of game. Helps when a game is inside of an iframe.
+## [Unreleased]
 
-# 3.0.1
+## [6.0.0] - 2016-06-04
+### Changed
+- Update renderer systems to only have 2 arguments
+### Removed
+- Old touch button support. Not needed since entities can now be buttons
 
-Fix infinite loop with unresolvable collisions.
+## [5.5.1] - 2016-06-04
+### Changed
+- Updated `entity-component-system` module.
 
-# 3.0.0
+## [5.5.0] - 2016-05-20
+### Added
+- Entities can act as virtual buttons now with the `setVirtualButtons` system.
 
-Simulate the game at the same frequency independant of the drawing framerate.
-There are no breaking API changes, but the games will run differently now, thus justifying a major version number.
+## [5.4.0] - 2016-04-23
+### Added
+- `applyEasing` system
 
-# 2.5.0
+## [5.3.0] - 2016-04-16
+### Fixed
+- `matchParent` system now also matches the z property on the `position` component
+### Added
+- `decayLifeSpan` system
+- `particles` module
 
-Pause scenes and mute audio when tab loses focus.
+## [5.2.0] - 2016-04-05
+### Added
+- `importTilemap` function for importing [Tiled](http://www.mapeditor.org/) tilemaps.
+- `timer` component now has a `loop` flag to make it repeat
+- `applyAcceleration` system
+- `random.inRange()` & `random.from()`
+- `apply-shake` and `revert-shake` systems
+- Use `"all"` in `systems.json` for a system to apply to all scenes. This replaces the array.
 
-# 2.4.0
+### Changed
+- Improved the look of the FPS counter
 
-Add support for Game Center leaderboards and achievements.
-Add support for In-App Purchases. Not to be used for evil!
-Add new Button class to make animated buttons much easier.
-Add new Particle engine.
+### Fixed
+- `game.sounds.setVolume` now works
 
-# 2.3.0
+## [5.1.2] - 2016-03-23
+### Fixed
+- Updated `html5-gamepad` to fix crash in Safari
 
-Add Animation.rotateClockwise()/.rotateCounterclockwise() and buffer.rotateClockwise()/.rotateCounterclickwise(). Add AnimationLoader support for rotation.
+## [5.1.1] - 2016-03-17
+### Fixed
+- Mouse button should default to not pressed
 
-# 2.2.0
+## [5.1.0] - 2016-03-13
+### Fixed
+- Mouse bug where input sometimes doesn't register
+- Make draw ordering stable when entities are on the same Y position
 
-Change Entity.solveCollisions() to return an array of entities that were involved in collisions.
+### Added
+- Add `game.registerPrefab` and `game.registerPrefabs` to create new prefabs at runtime.
+- Suppport `alpha` transparency in `image` component.
 
-# 2.1.0
+## [5.0.0] - 2016-03-05
+### Removed
+- `match-center` system, you should use `match-center-x` and `match-center-y` to achieve the same thing.
 
-Way better collision solving.
+### Added
+- Gamepad support!
 
-# 2.0.0
+## [4.1.1] - 2016-02-29
+### Fixed
+- Fix `constrainPosition` system
+- Fix more places in game.js where `input` needed to be `inputs`.
 
-Implement volume control and change how mute works.
+## [4.1.0] - 2016-02-29
+### Fixed
+- Fix bug in game.js where `input` needed to be `inputs`.
 
-# 1.3.0
+### Added
+- Add `matchCenterX` and `matchCenterY` systems
 
-Add openUrl(). And Mouse.onmouseup.
+## [4.0.0] - 2016-02-28
+### Changed
+- Change `contstrain-to-playable-area` to `constrain-position`, and make the system use an entity for the area.
+- Renamed `game.input` to `game.inputs`.
+- Moved `zindex` component into the `position` component's `z` property.
 
-# 1.2.0
+## [3.2.0] - 2015-01-30
+### Added
+- Inputs support mouse buttons
 
-Add optional bounding rectangle to Mouse.isPressed(). This makes the API more similar to consumePressed().
+## [3.1.1] - 2015-01-30
+### Fixed
+- allow `game.switchScene()` during scene enter script
+>>>>>>> upstream/master
 
-# 1.1.2
+## [3.1.0] - 2015-01-30
+### Added
+- match-center system
 
-Fix iPhone/iPad detection.
+## [3.0.2] - 2015-12-30
+### Fixed
+- Fix soundloader bug.
+- Default rotation.x and rotation.y to the center of the entity.
 
-# 1.1.1
+## [3.0.1] - 2015-12-30
+### Fixed
+- Remove deleted entities from collision lists.
 
-Include ad sizes.
+## [3.0.0] - 2015-12-30
+### Added
+- Add `instantiatePrefab` function to instantiate new entities from prefabs
 
-# 1.1.0
+### Changed
+- `Game` constructor now loads all the json files by itself. Now it only needs 2 arguments.
 
-Add advertising support. Currently only uses iAd in Ejecta.
+### Fixed
+- animation frame splitting now copies all animation properties, and doesn't lose any
 
-# 1.0.1
+## [2.0.0] - 2015-12-28
+### Removed
+- remove magical "splatjs:" way of loading systems.
 
-Fix mouse coordinates in Ejecta when canvas is scaled.
+## [1.0.0] - 2015-12-28
+### Changed
+- automatically size the canvas based on a selectable algorithm.
 
-# 1.0.0
+### Added
+- matchCanvasSize system to make an entity the same size as the canvas
+- matchAspectRatio system to make an entity match the aspect ratio of another entity
 
-Convert save data to async API so it works with Chrome Apps. This is a breaking change, so respecting semver makes me bump the version to 1.0.0. :-/
+## [0.7.0] - 2015-12-21
+### Added
+- add `Input.buttonPressed()` and `Input.buttonReleased()`
 
-# 0.1.6
+## [0.6.2] - 2015-12-21
+### Added
+- add warnings about bad image component values and provide defaults for unset values
 
-Fix scaling on Ejecta. You must now specify canvas.width/height in JS instead of HTML.
+### Fixed
+- fix bug where animations wouldn't work
 
-# 0.1.5
+## [0.6.1] - 2015-12-20
+### Fixed
+- mouse coordinates scale correctly when no css is applied to canvas
 
-Fix font loading in Firefox. It doesn't like single quotes.
+## [0.6.0] - 2015-12-20
+### Changed
+- use box-intersect module for faster collision detection
+
+## [0.5.0] - 2015-12-19
+### Added
+- window.timeSystems() to log timings of ECS systems
+
+### Changed
+- Speed up advanceAnimations system
+
+## [0.4.2] - 2015-12-19
+### Fixed
+- applyMovement2d never found entities
+
+## [0.4.1] - 2015-12-17
+### Fixed
+- Readme typo
+- Format changelog
+
+## [0.4.0] - 2015-12-17
+### Changed
+- Upgrade to entity-component-system 2.0.0
+
+## [0.3.2]
+- Add method to reset box collider cache
+
+## [0.3.1]
+- Un-scale the viewport when it is reset
+
+## [0.3.0]
+- Support scaling of viewport through camera
+- Draw custom buffer for an entity if it is specified
+
+## [0.2.0]
+- Support rotation when drawing images.
+
+## [0.1.1]
+- Log more info on no such image error
+
+## [0.1.0]
+- Add matchParent system.
+- Allow sound loop start and end settings
+
+## [0.0.1]
+- Add a way to remove a deleted entity from the collision detection cache.
+
+## [0.0.0]
+- Fork from original splatjs project.

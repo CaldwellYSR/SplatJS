@@ -1,17 +1,16 @@
 {
-  "name": "splatjs",
-  "version": "3.1.0",
+ "name": "splat-ecs",
+  "version": "6.0.0",
   "description": "A 2D HTML5 Canvas game engine",
   "main": "lib/main.js",
   "scripts": {
-    "lint-js": "bash -c \"jshint lib/*.js\"",
-    "build-js": "node build.js",
-    "build-docs": "bash -c \"jsdoc -d docs README.md lib/*.js lib/*.jsdoc\"",
-    "build": "npm run lint-js && npm run build-js && npm run build-docs"
+    "lint-js": "eslint lib",
+    "docs": "jsdoc lib -c jsdoc/conf.json -d docs -r README.md",
+    "build": "npm run lint-js && npm run docs"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SplatJS/SplatJS.git"
+    "url": "https://github.com/SplatJS/splat-ecs.git"
   },
   "keywords": [
     "html5",
@@ -22,42 +21,20 @@
   "author": "Eric Lathrop <eric@ericlathrop.com> (http://ericlathrop.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SplatJS/SplatJS/issues"
+   "url": "https://github.com/SplatJS/splat-ecs/issues"
   },
-  "homepage": "https://splatjs.github.io",
+  "homepage": "https://github.com/SplatJS/splat-ecs",
   "dependencies": {
-    "html5-gamepad": "0.0.0",
-    "mersenne-twister": "^1.0.1"
+    "box-intersect": "^1.0.1",
+    "easing-js": "^1.0.1",
+    "entity-component-system": "^3.0.0",
+    "game-keyboard": "0.1.0",
+    "html5-gamepad": "^0.1.4",
+    "mersenne-twister": "^1.0.1",
+    "time-accumulator": "0.0.0"
   },
   "devDependencies": {
-    "browserify": "~3.24.11",
-    "jsdoc": "^3.3.0-alpha5",
-    "jshint": "^2.4.4",
-    "uglifyify": "^2.4.0"
-  },
-  "jshintConfig": {
-    "camelcase": true,
-    "curly": true,
-    "eqeqeq": true,
-    "forin": true,
-    "freeze": true,
-    "immed": true,
-    "indent": 4,
-    "latedef": "nofunc",
-    "newcap": true,
-    "noarg": true,
-    "noempty": true,
-    "nonbsp": true,
-    "nonew": true,
-    "quotmark": "double",
-    "unused": "strict",
-    "trailing": true,
-    "browser": true,
-    "devel": true,
-    "globalstrict": true,
-    "globals": {
-      "module": false,
-      "require": false
-    }
+    "eslint": "^1.10.1",
+    "jsdoc": "^3.4.0"
   }
 }

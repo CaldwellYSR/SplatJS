@@ -1,40 +1,50 @@
-# SplatJS
+![Splat ECS](./images/splat-ecs-logo.png)
 
 A 2d HTML5 Canvas game engine
 
-SplatJS is a 2d game engine made for creating multi-platform games entirely in JavaScript.
+Splat ECS is a 2d game engine made for creating multi-platform games entirely in JavaScript. Splat ECS is built around the [Entity Component System](https://github.com/ericlathrop/entity-component-system) pattern, which is flexible and promotes composition of behaviors.
 
 # Features
 
 * Rectangles!
-* Keyboard, mouse, and touch input
+* Keyboard, mouse, touch, & gamepad input
 * Sounds and music (Web Audio API and HTML5 Audio)
 * Sprite animation
 * Asset loading, and built-in loading screen
 * Games work well on phones, tablets, and desktop browsers.
 * A\* Pathfinding
 * Particles
+* Tiled map editor support
+* Easing
 
-# Supported Platforms
+# Supported (tested) Platforms
 
 * Chrome (desktop & mobile)
 * Firefox
 * Internet Explorer (desktop & mobile)
 * Safari (desktop & mobile)
+* Mac using [Electron](https://github.com/atom/electron)
+* Linux x64 using [Electron](https://github.com/atom/electron)
 * iOS using [Ejecta](http://impactjs.com/ejecta)
 * Chrome Web Store
 
-SplatJS works in PhoneGap/Cordova, but it seems like the apps it produces lack hardware acceleration, making games unplayable.
+Splat ECS works in PhoneGap/Cordova, but it seems like the apps it produces lack hardware acceleration, making games unplayable.
+Splat ECS may or may not work on other platforms, please let us know what you find out.
 
-# Download a standalone SplatJS:
+# Create a new Game (recommended)
 
+<<<<<<< HEAD
 * 3.1.0 [uncompressed](https://splatjs.github.io/download/splat-3.1.0.js) - [minified](https://splatjs.github.io/download/splat-3.1.0.min.js)
+=======
+[Fork the starter project](https://github.com/SplatJS/splat-ecs-starter-project)
+>>>>>>> upstream/master
 
 # Install through [NPM](https://www.npmjs.org)
 
 ```
-$ npm install --save splatjs
+$ npm install --save splat-ecs
 ```
+<<<<<<< HEAD
 Create a file named game.js and start your game with this code:
 ```javascript
 "use strict";
@@ -76,19 +86,22 @@ Include canvas element with id "canvas" and bundled JavaScript file (Splat + Gam
 ```html
 <canvas id="canvas" width="1136" height="640"></canvas>
 <script type="text/javascript" src="index.js"></script>
+=======
+Then require Splat ECS into your game:
+```
+var Splat = require("splat-ecs");
+>>>>>>> upstream/master
 ```
 
-# Games using SplatJS
+# Games using Splat ECS
 
-* [Splat Pong](https://github.com/SplatJS/splatpong) is a good tutorial project to read through.
-* [SyRUSH](http://twoscoopgames.com/syrush/)
-* [Stanley Squeaks and the Emerald Burrito](http://twoscoopgames.com/stanleysqueaks/)
-* [Mr. Fluffykin's Great Sorting Adventure](http://twoscoopgames.com/fluffykins/)
-* [Arkeynoid](http://mintchipleaf.com/games/ludum/)
-* [Kickbot](http://twoscoopgames.com/kickbot/)
-* [base.jump](http://mintchipleaf.com/games/basejump/)
-* [Apartment 213](http://twoscoopgames.com/apartment213/)
-* [Scurry](http://twoscoopgames.com/scurry/)
-* [Echo Bat](http://mintchipleaf.com/games/echobat/)
+* [Splat ECS starter project](https://github.com/SplatJS/splat-ecs-starter-project)
+* [Polymorphic](https://github.com/RiseAndShineGames/Polymorphic)
+* [Electropolis](https://github.com/twoscoopgames/electropolis)
+* [Cluster Junk](https://github.com/TwoScoopGames/Cluster-Junk)
+* [Zen Madness](https://github.com/aquisenberry/ggj_meditate)
+* [Treatment and Control](https://github.com/TwoScoopGames/Treatment-and-Control)
+* [Uprooted](https://github.com/TwoScoopGames/ld32)
+* [The Day the World Changed](https://github.com/TwoScoopGames/ggj15)
 
 Send a pull request to add your game to the list!
