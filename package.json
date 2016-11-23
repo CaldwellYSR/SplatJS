@@ -1,6 +1,6 @@
 {
- "name": "splat-ecs",
-  "version": "6.0.0",
+  "name": "splat-ecs",
+  "version": "7.5.0",
   "description": "A 2D HTML5 Canvas game engine",
   "main": "lib/main.js",
   "scripts": {
@@ -27,14 +27,15 @@
   "dependencies": {
     "box-intersect": "^1.0.1",
     "easing-js": "^1.0.1",
-    "entity-component-system": "^3.0.0",
+    "entity-component-system": "^4.0.4",
     "game-keyboard": "0.1.0",
     "html5-gamepad": "^0.1.4",
-    "mersenne-twister": "^1.0.1",
+    "mersenne-twister": "^1.1.0",
+    "pako": "^1.0.3",
     "time-accumulator": "0.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.1",
+    "eslint": "^3.3.1",
     "jsdoc": "^3.4.0"
   }
 }

@@ -1,4 +1,4 @@
-![Splat ECS](./images/splat-ecs-logo.png)
+![Splat ECS](./images/splat-logo.png)
 
 A 2d HTML5 Canvas game engine
 
@@ -14,6 +14,7 @@ Splat ECS is a 2d game engine made for creating multi-platform games entirely in
 * Games work well on phones, tablets, and desktop browsers.
 * A\* Pathfinding
 * Particles
+* SCREENSHAKE
 * Tiled map editor support
 * Easing
 
@@ -25,26 +26,20 @@ Splat ECS is a 2d game engine made for creating multi-platform games entirely in
 * Safari (desktop & mobile)
 * Mac using [Electron](https://github.com/atom/electron)
 * Linux x64 using [Electron](https://github.com/atom/electron)
-* iOS using [Ejecta](http://impactjs.com/ejecta)
-* Chrome Web Store
+* Chrome Web Store (currently broken [see issue #69](https://github.com/SplatJS/splat-ecs/issues/69))
+* Android using [Cordova](https://cordova.apache.org/)
 
-Splat ECS works in PhoneGap/Cordova, but it seems like the apps it produces lack hardware acceleration, making games unplayable.
-Splat ECS may or may not work on other platforms, please let us know what you find out.
+Splat now works in Cordova, and due to updates to recent phone browsers we have seen good framerates on Android in google Chome. We have not tested Cordova builds on iOS yet, please let us know what you find out.
 
-# Create a new Game (recommended)
+# Requirements
+* Browser (like Firefox or Chrome)
+* Text editor
+* Terminal
+* [Node.js](https://nodejs.org/en/)
 
-<<<<<<< HEAD
-* 3.1.0 [uncompressed](https://splatjs.github.io/download/splat-3.1.0.js) - [minified](https://splatjs.github.io/download/splat-3.1.0.min.js)
-=======
-[Fork the starter project](https://github.com/SplatJS/splat-ecs-starter-project)
->>>>>>> upstream/master
+# Create a new Game
+1. [Clone or download a zip of the starter project](https://github.com/SplatJS/splat-ecs-starter-project)
 
-# Install through [NPM](https://www.npmjs.org)
-
-```
-$ npm install --save splat-ecs
-```
-<<<<<<< HEAD
 Create a file named game.js and start your game with this code:
 ```javascript
 "use strict";
@@ -86,22 +81,39 @@ Include canvas element with id "canvas" and bundled JavaScript file (Splat + Gam
 ```html
 <canvas id="canvas" width="1136" height="640"></canvas>
 <script type="text/javascript" src="index.js"></script>
-=======
-Then require Splat ECS into your game:
-```
-var Splat = require("splat-ecs");
->>>>>>> upstream/master
 ```
 
-# Games using Splat ECS
-
-* [Splat ECS starter project](https://github.com/SplatJS/splat-ecs-starter-project)
-* [Polymorphic](https://github.com/RiseAndShineGames/Polymorphic)
-* [Electropolis](https://github.com/twoscoopgames/electropolis)
+# Games using Splat (ECS)
 * [Cluster Junk](https://github.com/TwoScoopGames/Cluster-Junk)
-* [Zen Madness](https://github.com/aquisenberry/ggj_meditate)
-* [Treatment and Control](https://github.com/TwoScoopGames/Treatment-and-Control)
-* [Uprooted](https://github.com/TwoScoopGames/ld32)
+* [Cali Bunga](https://riseshinegames.itch.io/cali-bunga)
+* [Flip Flap Pong](https://riseshinegames.itch.io/flip-flap-pong)
+* [Polymorphic](http://riseandshinegames.github.io/Polymorphic/build/)
+* [Electropolis](https://two-scoop-games.itch.io/electropolis)
+* [Morning Ritual](http://twoscoopgames.com/morningritual/game/)
+* [Drunken Boss Fight](http://aquisenberry.itch.io/jam-build)
+* [Zen Madness](http://aquisenberry.github.io/ggj_meditate/build/)
+* [Treatment and Control](http://twoscoopgames.com/ggj15/)
 * [The Day the World Changed](https://github.com/TwoScoopGames/ggj15)
+* [Uprooted](http://twoscoopgames.com/ld32/)
+
+See more Splat games at [http://splatjs.com/](http://splatjs.com/)
 
 Send a pull request to add your game to the list!
+
+## Contributing
+
+If you are interested in participating in this project, please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/SplatJS/splat-ecs/tags).
+
+## Authors
+
+* **[Eric Lathrop](https://github.com/ericlathrop)** - *Initial work*
+
+See also the list of [contributors](https://github.com/SplatJS/splat-ecs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.TXT](LICENSE.TXT) file for details
